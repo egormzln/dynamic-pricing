@@ -4,4 +4,4 @@
 - [Breakfast at the Frat](https://www.dunnhumby.com/source-files/)
 
 ## Автор
-- [tg @egormzln](https://t.me/egormzln)
+- Мизюлин Егор [@egormzln](https://t.me/egormzln)
