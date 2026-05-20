@@ -1,0 +1,8 @@
+{
+  "pool_ols_M1":-0.56,
+  "per_sku_ols":-2.51,
+  "ols_upc_M2":-2.59,
+  "ols_full_M3":-2.84,
+  "ols_with_promo_M4":-1.76,
+  "gbm_pdp":-0.43
+}

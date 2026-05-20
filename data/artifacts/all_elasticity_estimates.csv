@@ -1,0 +1,11 @@
+method,elasticity,note
+Pool OLS (M1),-0.56,naive
+Per-SKU OLS (median),-2.51,within-SKU
+OLS + UPC FE (M2),-2.59,biased
+OLS + UPC + store + time (M3),-2.84,biased
+OLS + promo (M4),-1.76,best linear
+GBM PDP (naive),-0.43,multicollinearity
+DML Manual Model A (with promo),-1.55,net-price
+DML Manual Model B (no promo),-2.67,price+promo bundle
+EconML LinearDML,-2.63,"price+promo, correct SE"
+CausalForestDML (mean),-2.62,heterogeneous
