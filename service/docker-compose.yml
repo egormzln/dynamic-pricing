@@ -1,0 +1,28 @@
+services:
+  backend:
+    build: ./backend
+    container_name: dp-backend
+    restart: unless-stopped
+    volumes:
+      # сохраняем SQLite (политика + аудит цен) между перезапусками
+      - dp-data:/app/data
+    expose:
+      - "8077"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8077/api/meta')"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  frontend:
+    build: ./frontend
+    container_name: dp-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+
+volumes:
+  dp-data:
